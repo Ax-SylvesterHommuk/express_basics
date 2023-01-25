@@ -1,6 +1,13 @@
 <h1>Questions about express</h1>
 <% questions.forEach((question) => { %>
-    <h2><%= question['title'] %></h2>
-    <p><%= question['user'] %></p>
-    <p><%= question['votes'] %></p>
-<% }); %>
+    <% if(question['user'].toLowerCase() === 'Kadi') { %>
+        <h2><%= question['title'] %></h2>
+        <p><%= question['user'] %></p>
+        <p><%= question['votes'] %></p>
+    <% } else { %>
+        <h1>Asked by other users:</h1>
+        <h2><%= question['title'] %></h2>
+        <p><%= question['user'] %></p>
+        <p><%= question['votes'] %></p>
+    <% } %>
+<% }); %> 
