@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/demo', (req, res) => {
-    res.render('index.ejs')
-});
+app.use(express.static('public'));
 
 app.get('/user/:username', (req, res) => {
     let user = req.params.username;
