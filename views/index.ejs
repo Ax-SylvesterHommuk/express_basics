@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="/style.css">
-    <title>Hello page</title>
-</head>
-<body>
-    <h1>Hello, <%= username %>!</h1>
-</body>
-</html>
+<h1>Questions about express</h1>
+<% questions.forEach((question) => { %>
+    <h2><%= question['title'] %></h2>
+    <p><%= question['user'] %></p>
+    <p><%= question['votes'] %></p>
+<% }); %>
